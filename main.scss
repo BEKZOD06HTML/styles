@@ -3,6 +3,15 @@
 @import"./page5";
 @import"./page6";
 
+@mixin box-button($border, $background-color, $color, $border-radius $cursor){
+    border:$border;
+    background-color: $background-color;
+    color: $color;
+    border-radius: $border-radius;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +20,7 @@
 .container{
     width: 1440px;
     margin: auto;
-   
+   overflow-x: hidden;
   
     .frist_page{
         width: 1440px;
@@ -83,17 +92,18 @@
             left: 250px;
     }
     button{
+        @include box-button{none, #DD2242, white, 30px, pointer}
         width: 300px;
         height: 90px;
         border: none;
-        border-radius: 50px;
-        background-color: #DD2242;
+        
+       
         position: relative;
-        color:white;
+       
         font-size: 20px;
         bottom: 400px;
         left: 250px;
-        cursor: pointer;
+     
         transition: 0.5s ease;
         &:hover{
             background-color: #b71c36;

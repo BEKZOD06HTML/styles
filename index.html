@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
+.<style>
+       
+        .menu-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
+      
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 200px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+       
+        .menu li {
+            padding: 8px 12px;
+            cursor: pointer;
+            background: #ffffff;
+            color: black;
+        }
+
+        .menu li:hover {
+            background-color: #ffffff;
+            color: black;
+        }
+    </style>
 <body>
     <div class="container" style="height: 3000px;">
         <div style="background-image:url(./back_img/diego-gutierrez-NRn5rrBnH8w-unsplash\ 1.svg);" class="frist_page">
@@ -17,24 +54,29 @@
                 </div>
                 <div>
                     <ul>
-                        <li><a href="#">DESTINATIONS</a></li>
-                        <li><a href="#">EXPERIENCES</a></li>
-                        <li> <a href="#">ABOUT</a></li>
-                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#a1">DESTINATIONS</a></li>
+                        <li><a href="#a4">EXPERIENCES</a></li>
+                        <li> <a href="#a5">GALLERY</a></li>
+                        <li><a href="#a6">ABOUT</a></li>
                     </ul>
                 </div>
                     <div class="buttons">
                         <button>
                             <img src="./icon/Vector (8).svg" alt="">
                         </button>
-                        <button>
-                            <img src="./icon/Vector (9).svg" alt="">
-                        </button>
+                        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+
                     </div>
+                    <ul class="menu" id="menu" style="position: relative; left: 300px; top: 80px;">
+                        <li style="color: black;">Item 1</li>
+                        <li style="color: black;">Item 2</li>
+                        <li style="color: black;">Item 3</li>
+                    </ul>
+                
             </header>
             <div class="middle">
                 <h1>Explore Indonesia</h1>
-                <button>Start travelling</button>
+                <button style="top: -140px;">Start travelling</button>
                 <img style="position: relative; right: 200px; bottom: 300px;" src="./icon/image_2024-11-17_13-25-42.png" alt="">
                 <div style="color: white; position: relative; bottom:150px; left: 100px;">
                     <h3 style="margin-bottom: 20px;">In</h3>
@@ -61,7 +103,7 @@
                 <img style="position: relative; left: 1022px; bottom: 507px;" src="./img/hussan-amir-h0DK5BIGBEg-unsplash 2.svg" alt="">
             </div>
         </div>
-        <div class="page2">
+        <div id="a" class="page2">
             <img src="./img/Rectangle 9.svg" alt="">
             <div class="text"> 
                 <h2 style="margin: 10px ;">The walkways of Indonesia spellbind</h2>
@@ -71,7 +113,7 @@
             
           
         </div>
-        <div class="page3">
+        <div class="page3" id="a1">
             
             <img src="./img/Rectangle 10.svg" alt="">
             <div class="text"> 
@@ -82,14 +124,39 @@
     
            
         </div>
-           <div class="page4" style="background-image: url(./back_img/ifan-bima-B04Xpnu5JQ4-unsplash\ 1.svg);">
+           <div class="page4" id="a2" style="background-image: url(./back_img/ifan-bima-B04Xpnu5JQ4-unsplash\ 1.svg);">
             <div  class="xz">
-           
-                <div class="gallery">
+                <div style="position: relative; left: 200px;" id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/Rectangle 1258.svg" class="d-block px-300px" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Rectangle 1259.svg" class="d-block px-300" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Rectangle 1260.svg" class="d-block " alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                <!-- <div class="gallery">
                    <span><img src="./img/Rectangle 1258.svg" alt=""></span>
                    <span><img src="./img/Rectangle 1259.svg" alt=""></span>
                    <span><img src="./img/Rectangle 1260.svg" alt=""></span>
-               </div>
+               </div> -->
                <!-- <div class="gallery">
                    <span><img src="./img/Rectangle 1260.svg" alt=""></span>
                    <span><img src="./img/Rectangle 1258.svg" alt=""></span>
@@ -101,11 +168,8 @@
                    <span><img src="./img/Rectangle 1260.svg" alt=""></span>
                </div> -->
            </div>
-           <div class="controls">
-               <img style="position:relative; left: 1300px; bottom: 160px; cursor: pointer;" src="./icon/Union.svg" alt="" id="rightbtn">
-               <img style="position: relative; left: 200px; bottom: 160px; cursor: pointer;" src="./icon/Union (1).svg" alt="" id="leftbtn">
-           </div>
-           <div class="bottom">
+
+           <div class="bottom" id="a3">
             <center><h1 >    By The Numbers</h1></center>
             <center><p style="width: 350px; height: 200px; margin: 20px 0 ;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></center>
            <div style="display: flex;">
@@ -128,7 +192,7 @@
             <center><p style="width: 400px; margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor.</p></center>
             <center>            <button style="width: 200px;height: 50px; border: none; border-radius: 50px; background-color: brown; color: white;">Learn More</button></center>
            </div>
-           <div class="page5" style="background-image: url(./back_img/hugo-matilla-EFuCATqfblI-unsplash\ 1.svg); height: 1000px;  padding: 50px;">
+           <div class="page5" id="a4" style="background-image: url(./back_img/hugo-matilla-EFuCATqfblI-unsplash\ 1.svg); height: 1000px;  padding: 50px;">
             <center ><h1 style="width: 800px; color: white;">Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h1></center>
             <center><img style=" margin-top: 50px;" src="./img/photo_2024-11-17_21-02-35.jpg" alt=""></center>
             <div style="display: flex; position: relative;top: 200px; left: 200px;">
@@ -144,44 +208,65 @@
                 </div></div>
 
         </div>
-        <div class="page5">
+        <div class="page5 " id="a5">
             <center><h1>Photo Gallery</h1></center>
             <center><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p></center>
-            <div style="position: relative; left: 150px; bottom: 200px;" class="image-grid">
-                <img style="position: relative; top: 300px;" src="./img/Image 06.svg" alt="">
-                <img style="position: relative; bottom: 20px;" src="./img/Image 05.svg" alt="">
-                <img style="position: relative; top: 140px;" src="./img/Image 02.svg" alt="">
-                <img style="position: relative;" src="./img/Image 04.svg" alt="">
-                <img style="position: relative;" src="./img/Image 03.svg" alt="">
-                <img style="position: relative;  " src="./img/Image 01.svg" alt="">
+            <div style="position: relative; left: 150px; bottom: 100px;" class="image-grid">
+                <img style="position: relative; top:150px;" src="./img/Image 06.svg" alt="">
+                <img style="position: relative; top: 00px;" src="./img/Image 05.svg" alt="">
+                <img style="position: relative; top: 70px;" src="./img/Image 02.svg" alt="">
+                <img style="position: relative; bottom: 1px;" src="./img/Image 04.svg" alt="">
+                <img style="position: relative;bottom: 150px; " src="./img/Image 03.svg" alt="">
+                <img style="position: relative; bottom: 70px;  " src="./img/Image 01.svg" alt="">
               </div>
         </div>
-        <div class="page6">
+        <div class="page6" id="a6">
             <h1>Getting there</h1>
-            <img class="img1" src="./img/photo_2024-11-17_23-04-56.jpg" alt="">
+            <img class="img1"  src="./img/photo_2024-11-17_23-04-56.jpg" alt="">
+            <div style="width: 700px; position: relative; left: 350px; bottom: 170px;">
+                <h3 style="margin-bottom: 20xp;">Bookings your flights</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+            </div>
             <div style="width: 700px; position: relative; left: 350px; bottom: 150px;">
                 <h3 style="margin-bottom: 20xp;">Bookings your flights</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
             </div>
-            <div style="width: 700px; position: relative; left: 350px; bottom: 90px;">
-                <h3 style="margin-bottom: 20xp;">Bookings your flights</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
-            </div>
            
-            <div style="width: 500px; position: relative; left: 650px; bottom: 50px;">
+            <div style="width: 500px; position: relative; left: 650px; bottom: 150px;">
                 <h3 style="margin-bottom: 20xp;">Bookings your flights</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
             </div>
-            <div style="width: 700px; position: relative; left: 370px; top: 30px;">
+            <div style="width: 700px; position: relative; left: 370px; bottom: 150px;">
                 <h3 style="margin-bottom: 20xp;">Bookings your flights</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
             </div>
-            <img class="img2" src="./img/Video.svg" alt="">
+            <img class="img2" style="position:relative; bottom: 450px;  " src="./img/Video.svg" alt="">
         </div>
         <div class="last"></div>
       
     </div> 
     
- 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+      
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+    
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

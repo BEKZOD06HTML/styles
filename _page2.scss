@@ -1,3 +1,10 @@
+@mixin box-button($border, $background-color, $color, $border-radius $cursor){
+    border:$border;
+    background-color: $background-color;
+    color: $color;
+    border-radius: $border-radius;
+}
+
 .page2{
     width: 1440px;
     height: 500px;
@@ -20,16 +27,10 @@
 
         
         
-        button{
+        button{ @include box-button{none, #DD2242, white, 30px, pointer}
             width: 200px;
             height: 70px;
-            background-color:#DD2242;
-            color: white;
-            border: none;
-            cursor: pointer;
             font-size: 24px;
-            border-radius: 50px;
-            
             transition:  0.5s ease;
         &:hover{
             background-color: #b71c36;
@@ -61,15 +62,10 @@
         
         
         button{
+            @include box-button{none, #DD2242, white, 30px, pointer}
             width: 200px;
             height: 70px;
-            background-color:#DD2242;
-            color: white;
-            border: none;
-            cursor: pointer;
             font-size: 24px;
-            border-radius: 50px;
-            
             transition:  0.5s ease;
         &:hover{
             background-color: #b71c36;
